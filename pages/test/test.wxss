@@ -1,0 +1,43 @@
+/* pages/test/test.wxss */
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+}
+
+.show-view {
+  width: 100%;
+  min-height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0
+  }
+
+.show-view .move_img {
+  display: inline-block;
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.list-view image {
+  display: inline-block;
+  width: 100rpx;
+  max-width: 200rpx;
+  height: 100rpx;
+}
+.move-item{
+  width: 150rpx;
+  height: 100rpx;
+  position: relative;
+}
+.move_item_hover .move-icon {
+  
+}

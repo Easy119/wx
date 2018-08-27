@@ -1,0 +1,55 @@
+/**index.wxss**/
+
+.content {
+  width: 750rpx;
+  height: 100vh;
+  position: relative;
+}
+
+.content .index_bg {
+  width: 750rpx;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* 背景 */
+
+.content .index_bg .bg_img {
+  display: block;
+  width: 750rpx;
+  height: 100vh;
+}
+
+/* gif */
+
+.index_gif {
+  position: absolute;
+  left: 0;
+  top: 540rpx;
+  width: 750rpx;
+  height: 400rpx;
+}
+
+.index_gif .bg_gif {
+  margin: 0 auto;
+  display: block;
+  width: 400rpx;
+  height: 400rpx;
+}
+
+.index_play {
+  position: absolute;
+  left: 0;
+  bottom: 150rpx;
+  width: 750rpx;
+  height: 82rpx;
+}
+
+.index_play .bg_play {
+  display: block;
+  width: 195rpx;
+  height: 82rpx;
+  margin: 0 auto;
+}

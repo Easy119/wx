@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class='content'>
+  <!-- 背景 -->
+  <view class='index_bg'>
+    <image src='../../images/index/index_bg.png' class='bg_img'></image>
+  </view>
+  <view class='index_gif'>
+    <image src='../../images/index/index.gif' class='bg_gif'></image>
+  </view>
+  <view class='index_play'>
+  <image src='../../images/index/index_play.png' class='bg_play' bindtap='play'></image></view>
+</view>

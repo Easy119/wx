@@ -1,0 +1,16 @@
+<!--pages/test/test.wxml-->
+<view class='show-view'>
+  <block wx:for="{{move_arr}}">
+    <view class='move-item' hidden='{{item.flag}}'>
+     <icon type='clear' size='18' color="red" class='move-icon'  hidden='{{item.id == close_id?false:true}}' bindtap='delect_img' id="{{item.id}}"></icon>
+      <image src='{{item.src}}' bindtap='deal_img' id="{{item.id}}" class='move_img'></image>
+    </view>
+  </block>
+</view>
+<view class='content'>
+  <block wx:for="{{listData}}">
+    <view class='list-view'>
+      <image src='{{item.src}}' bindtap='select_img' id="{{item.id}}"></image>
+    </view>
+  </block>
+</view>
