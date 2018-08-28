@@ -30,12 +30,12 @@
   <!-- 移动区域 -->
   <movable-area class="move_view">
     <block wx:for="{{move_arr}}">
-      <movable-view class="move-view-item" direction="all" bindtouchend='end' bindchange="change" id="{{item.id}}" damping="100" style='width:{{item.width}};height:{{item.height}}' bindtouchend='end' x="{{item.x}}" y="{{item.y}}"  hidden='{{item.flag}}'>
+      <movable-view class="move-view-item" direction="all"  bindchange="change" id="{{item.id}}" damping="100" style='width:{{item.width}};height:{{item.height}}'  x="{{item.x}}" y="{{item.y}}"  hidden='{{item.flag}}' bindtouchend='end' >
         <view style='width:{{item.width}};height:{{item.height}};position:relative'>
           <view style='position:absolute;top:-18px;left:-18px' hidden='{{item.id == close_id?false:true}}'>
             <icon type='clear' size='18' color="#fff" bindtap='delect_img' id='{{item.id}}'></icon>
           </view>
-          <image src='{{item.src}}' class='img' style='width:{{item.width}};height:{{item.height}}'  bindtap='deal_img' id='{{item.id}}'></image>
+          <image src='{{item.src}}' class='img' style='width:{{item.width}};height:{{item.height}}'  bindtouchstart='deal_img' id='{{item.id}}'></image>
         </view>
       </movable-view>
     </block>
