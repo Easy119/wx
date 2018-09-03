@@ -13,7 +13,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.2.3",
 	"appid": "wxf22554f258cee45d",
-	"projectname": "test",
+	"projectname": "wx",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 5,
 			"list": [
 				{
 					"id": -1,
@@ -56,7 +56,20 @@
 				{
 					"id": -1,
 					"name": "new",
-					"pathName": "pages/new/new"
+					"pathName": "pages/new/new",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "next",
+					"pathName": "pages/next/next",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "tv",
+					"pathName": "pages/watchTv/watchTv",
+					"query": ""
 				}
 			]
 		}

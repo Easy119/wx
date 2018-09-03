@@ -1,0 +1,68 @@
+<!--pages/next/next.wxml-->
+<!-- 整体项目构架 -->
+<view class='content'>
+  <!-- 背景图片 -->
+  <view class='bg_img_view'>
+    <image src='../../images/bg/bg_3.png' class='bg_img'></image>
+  </view>
+  <view></view>
+  <!-- 头像相框 -->
+  <view class='user_info'>
+    <view class='user_header'>
+      <open-data type="userAvatarUrl" bindgetuserinfo="bindgetuserinfo"></open-data>
+    </view>
+  </view>
+  <!-- 灰色的背景 图片的 -->
+  <view class='fixed_view'>
+    <view class='fixed_view_item'>
+      <block wx:for="{{fixed_view}}">
+        <view class='fixed_view_img'>
+          <image src='{{item.src}}'></image>
+        </view>
+      </block>
+      <block wx:for="{{fixed_view_botom}}">
+        <view class='fixed_view_img'>
+          <image src='{{item.src}}'></image>
+        </view>
+      </block>
+    </view>
+  </view>
+  <!-- 移动区域 -->
+  <movable-area class="move_view">
+    <block wx:for="{{move_arr}}">
+      <movable-view class="move-view-item" direction="all" bindchange="change" id="{{item.id}}" damping="100" style='width:{{item.width}};height:{{item.height}}' x="{{item.x}}" y="{{item.y}}" hidden='{{item.flag}}' bindtouchend='end'>
+        <view style='position:relative'>
+          <view style='position:absolute;top:-18px;left:-18px' hidden='{{item.id == close_id?false:true}}'>
+            <icon type='clear' size='18' color="#fff" bindtap='delect_img' id='{{item.id}}'></icon>
+          </view>
+          <image src='{{item.src}}' class='img' style='width:{{item.width}};height:{{item.height}}' bindtouchstart='deal_img' id='{{item.id}}'></image>
+        </view>
+      </movable-view>
+    </block>
+  </movable-area>
+  <!-- next -->
+  <view class='next' hidden='{{next_btn}}' bindtap='nextPage'>next</view>
+  <view class='get_img' bindtap='get_img'>保存</view>
+  <!-- footer -->
+  <view class='footer'>
+    <!-- 滚动区域 -->
+    <view class='scroll_view'>
+      <!-- 按钮 箭头 -->
+      <view class='arrow_view'></view>
+      <scroll-view class='scroll_box' scroll-x="true" scroll-with-animation="false" enable-back-to-top="true" bindscroll="scroll">
+        <block wx:for="{{product_arr}}">
+          <view class='scroll_box_item'>
+            <image src='{{item.src}}' class='scroll_img' style='width:{{item.width}};height:{{item.height}}' bindtap='push_img_move' id="{{item.id}}"></image>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <!-- 底部小组件 -->
+    <view class='footer_small_view'>
+    </view>
+  </view>
+</view>
+<!-- 生成图片 -->
+<view class='canvas' hidden='{{get_img}}'  bindtap='close_img'>
+  <canvas canvas-id='myCanvas' id='myCanvas' style=' width: 100%;height: 100vh;'></canvas>
+</view>

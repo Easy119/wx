@@ -5,7 +5,9 @@
     "pages/lastMove/lastMove",
     "pages/logs/logs",
     "pages/test/test",
-    "pages/new/new"
+    "pages/new/new",
+    "pages/next/next",
+    "pages/watchTv/watchTv"
     
   ],
   "window":{
