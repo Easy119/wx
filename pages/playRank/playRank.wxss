@@ -1,0 +1,2 @@
+/* pages/playRank/playRank.wxss */
+.rankTitle{text-align: center;height: 100rpx;width: 100%;font: 36rpx/100rpx "微软雅黑";}

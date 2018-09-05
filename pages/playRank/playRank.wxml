@@ -1,0 +1,7 @@
+<!--pages/playRank/playRank.wxml-->
+<view class='rankTitle'>请选择 挑战的游戏等级</view>
+<view class='rankList'>
+  <button bindtap='select_level' id='0'>有点简单</button>
+  <button bindtap='select_level' id='1'>略显麻烦</button>
+  <button bindtap='select_level' id='2'>有点变态</button>
+</view>

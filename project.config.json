@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -69,6 +69,42 @@
 					"id": 5,
 					"name": "tv",
 					"pathName": "pages/watchTv/watchTv",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "rank",
+					"pathName": "pages/playRank/playRank",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "first",
+					"pathName": "pages/first/first",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "third",
+					"pathName": "pages/third/third",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "second",
+					"pathName": "pages/second/second",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "second",
+					"pathName": "pages/third/third",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "last",
+					"pathName": "pages/last/last",
 					"query": ""
 				}
 			]

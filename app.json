@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/move/move",
     "pages/lastMove/lastMove",
@@ -7,13 +7,17 @@
     "pages/test/test",
     "pages/new/new",
     "pages/next/next",
-    "pages/watchTv/watchTv"
-    
+    "pages/watchTv/watchTv",
+    "pages/playRank/playRank",
+    "pages/first/first",
+    "pages/second/second",
+    "pages/third/third",
+    "pages/last/last"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   }
 }

@@ -53,7 +53,7 @@ Page({
   },
   play:function(){
     wx.navigateTo({
-      url: '../move/move',
+      url: '../playRank/playRank',
     })
   }
 })
