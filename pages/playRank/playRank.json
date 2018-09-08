@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "游戏等级选择",
+  "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "black"
+}

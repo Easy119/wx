@@ -1,5 +1,64 @@
 //app.js
 App({
+  data: {
+    product_arr: [{
+      src: "../../images/bg/0.png",
+      width: "180rpx",
+      height: "110rpx",
+      id: "0"
+    }, {
+      src: "../../images/bg/1.png",
+      width: "180rpx",
+      height: "90rpx",
+      id: "1"
+    }, {
+      src: "../../images/bg/2.png",
+      width: "90rpx",
+      height: "90rpx",
+      id: "2"
+    }, {
+      src: "../../images/bg/3.png",
+      width: "180rpx",
+      height: "90rpx",
+      id: "3"
+    }, {
+      src: "../../images/bg/4.png",
+      width: "180rpx",
+      height: "90rpx",
+      id: "4"
+    }, {
+      src: "../../images/bg/5.png",
+      width: "180rpx",
+      height: "90rpx",
+      id: "5"
+    }, {
+      src: "../../images/bg/6.png",
+      width: "90rpx",
+      height: "90rpx",
+      id: "6"
+    }, {
+      src: "../../images/bg/7.jpg",
+      id: "7",
+      width: "180rpx",
+      height: "90rpx",
+    }, {
+      src: "../../images/bg/8.jpg",
+      id: "8",
+      width: "180rpx",
+      height: "90rpx",
+    }, {
+      src: "../../images/bg/9.jpg",
+      id: "9",
+      width: "90rpx",
+      height: "180rpx",
+    }, {
+      src: "../../images/bg/10.jpg",
+      width: "90rpx",
+      height: "180rpx",
+      id: "10"
+    }],
+    music: ["http://activity.ziinlife.com/wx/music/bg.mp3", "http://activity.ziinlife.com/wx/music/click.mp3", "http://activity.ziinlife.com/wx/music/right.mp3","http://activity.ziinlife.com/wx/music/end_move.mp3"]
+  },
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

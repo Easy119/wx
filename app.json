@@ -1,23 +1,16 @@
 {
-  "pages": [
+  "pages":[
     "pages/index/index",
-    "pages/move/move",
-    "pages/lastMove/lastMove",
-    "pages/logs/logs",
-    "pages/test/test",
-    "pages/new/new",
-    "pages/next/next",
-    "pages/watchTv/watchTv",
-    "pages/playRank/playRank",
     "pages/first/first",
+    "pages/playRank/playRank",
     "pages/second/second",
-    "pages/third/third",
     "pages/last/last"
   ],
-  "window": {
-    "backgroundTextStyle": "light",
+  "window":{
+    "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
-  }
+    "navigationBarTitleText": "吱音-柜在懂你",
+    "navigationBarTextStyle":"black"
+  },
+  "requiredBackgroundModes":["audio"]
 }

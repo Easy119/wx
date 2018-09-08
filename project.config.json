@@ -11,9 +11,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.2.3",
+	"libVersion": "2.2.5",
 	"appid": "wxf22554f258cee45d",
-	"projectname": "wx",
+	"projectname": "911",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -33,50 +33,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 3,
 			"list": [
-				{
-					"id": -1,
-					"name": "move",
-					"pathName": "pages/move/move",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "log",
-					"pathName": "pages/logs/logs",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "test",
-					"pathName": "pages/test/test",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "new",
-					"pathName": "pages/new/new",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "next",
-					"pathName": "pages/next/next",
-					"query": ""
-				},
-				{
-					"id": 5,
-					"name": "tv",
-					"pathName": "pages/watchTv/watchTv",
-					"query": ""
-				},
-				{
-					"id": -1,
-					"name": "rank",
-					"pathName": "pages/playRank/playRank",
-					"query": ""
-				},
 				{
 					"id": -1,
 					"name": "first",
@@ -85,20 +43,8 @@
 				},
 				{
 					"id": -1,
-					"name": "third",
-					"pathName": "pages/third/third",
-					"query": ""
-				},
-				{
-					"id": 9,
 					"name": "second",
 					"pathName": "pages/second/second",
-					"query": ""
-				},
-				{
-					"id": 10,
-					"name": "second",
-					"pathName": "pages/third/third",
 					"query": ""
 				},
 				{
@@ -106,6 +52,11 @@
 					"name": "last",
 					"pathName": "pages/last/last",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/test/test"
 				}
 			]
 		}

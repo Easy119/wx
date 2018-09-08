@@ -1,2 +1,58 @@
-/* pages/playRank/playRank.wxss */
-.rankTitle{text-align: center;height: 100rpx;width: 100%;font: 36rpx/100rpx "微软雅黑";}
+.rank_bg {
+  width: 100%;
+  height: 100vh;
+  background-image: url("http://activity.ziinlife.com/wx/rank/rank.jpg");
+  background-size: 100% 1206rpx;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
+
+.rank_bg .rank_item_first {
+  position: absolute;
+  width: 100%;
+  height: 100rpx;
+  left: 0;
+  top: 200rpx;
+  z-index: 111;
+}
+
+.rank_bg .rank_item_first .first {
+  display: block;
+  width: 436rpx;
+  height: 92rpx;
+  margin: 4rpx auto;
+}
+
+.rank_bg .rank_item_second {
+  position: absolute;
+  width: 100%;
+  height: 100rpx;
+  left: 0;
+  top: 400rpx;
+  z-index: 111;
+}
+
+.rank_bg .rank_item_second .second {
+  display: block;
+  width: 436rpx;
+  height: 92rpx;
+  margin: 4rpx auto;
+}
+
+.rank_bg .rank_item_last {
+  position: absolute;
+  width: 100%;
+  height: 100rpx;
+  left: 0;
+  top: 600rpx;
+  z-index: 111;
+}
+
+.rank_bg .rank_item_last .last {
+  display: block;
+  width: 436rpx;
+  height: 92rpx;
+  margin: 4rpx auto;
+}

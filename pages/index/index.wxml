@@ -1,12 +1,14 @@
 <!--index.wxml-->
-<view class='content'>
-  <!-- 背景 -->
-  <view class='index_bg'>
-    <image src='../../images/index/index_bg.png' class='bg_img'></image>
-  </view>
-  <view class='index_gif'>
+<view class='content' style='width:750rpx;height:{{height_num}}px'>
+  <view class='index_gif' style='top:{{570 * screen_rate}}rpx;width:{{width_num}}px;height:300rpx'>
     <image src='../../images/index/index.gif' class='bg_gif'></image>
   </view>
-  <view class='index_play'>
-  <image src='../../images/index/index_play.png' class='bg_play' bindtap='play'></image></view>
+  <view class='index_play' style='bottom:{{150 * screen_rate}}rpx;width:100%;'>
+    <image src='../../images/index/index_play.jpg' class='bg_play' bindtap='play'></image>
+  </view>
+  <!-- 声音 -->
+  <view style='display:none'>
+    <audio src='{{music[0]}}' id='bg_music'></audio>
+    <audio src='{{music[1]}}' id='click'></audio>
+  </view>
 </view>

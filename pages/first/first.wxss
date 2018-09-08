@@ -25,66 +25,21 @@
   height: 100vh;
 }
 
-/* 头像 相框 */
-
-.content .user_info {
-  position: absolute;
-  left: 190rpx;
-  top: 203rpx;
-  z-index: -11;
-  width: 112rpx;
-  height: 112rpx;
-  background-color: #eae8e8;
-  box-shadow: 1rpx 2rpx 2rpx #f1f1f1;
-}
-
-.user_info .user_header {
-  width: 82rpx;
-  height: 82rpx;
-  margin: 15rpx 15rpx;
-}
-
 /* 固定区域 */
 
 .content .fixed_view {
-  width: 100%;
-  height: 100vh;
+  width: 400rpx;
+  height: 200rpx;
   z-index: 100px;
   position: absolute;
-  left: 0;
-  top: 0;
+  /* left: 150rpx; */
+  /* top: 750rpx; */
 }
 
-.fixed_view .fixed_view_item {
-  width: 400;
-  height: 160rpx;
+.fixed_view .fixed_view_img {
+  width: 400rpx;
+  height: 200rpx;
   z-index: 100px;
-  margin-left: 150rpx;
-  margin-top: 800rpx;
-}
-
-/* 灰色的 图片 */
-
-.fixed_view_item .fixed_view_img {
-  width: 400rpx;
-  height: 200rpx;
-  position: relative;
-  /* background-color: rgba(198,198,198, 1) */
-}
-
-.fixed_view_item .fixed_view_img image {
-  display: block;
-  width: 400rpx;
-  height: 200rpx;
-}
-
-.fixed_view_img .fixed_view_img_layout {
-  width: 400rpx;
-  height: 200rpx;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: rgba(176, 176, 176, 0.7);
 }
 
 /* 移动区域 */
@@ -92,9 +47,26 @@
 .content .move_view {
   width: 100%;
   height: 100vh;
-  z-index: 200px;
+  z-index: 300px;
 }
 
+/* next */
+
+.content .next {
+  width: 100%;
+  height: 75rpx;
+  position: absolute;
+  bottom: 200rpx;
+  right: 0;
+  color: #fff;
+  z-index: 400
+}
+#answer{
+  display: block;
+  width: 152rpx;
+  height: 71rpx;
+  margin: 0 auto;
+}
 /* footer */
 
 .footer {
@@ -103,82 +75,115 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 200rpx;
-  background-color: #fff;
-}
-
-/* next */
-
-.content .next {
-  width: 150rpx;
-  height: 75rpx;
-  position: absolute;
-  bottom: 200rpx;
-  right: 0;
-  text-align: center;
-  line-height: 75rpx;
-  background-color: gray;
-  color: #fff;
+  height: 260rpx;
 }
 
 /* 箭头 */
 
-.scroll_view .arrow_view {
+/* .scroll_view .arrow_view {
   width: 50rpx;
   height: 25rpx;
   float: right;
-  /* background-color: red; */
   margin-right: 25rpx;
-}
+} */
 
 /* 滚动 组件 */
 
 .footer .scroll_view {
   width: 100%;
-  height: 150rpx;
-  background-color: #fff;
+  height: 260rpx;
 }
 
 .scroll_view .scroll_box {
   width: 100%;
-  height: 125rpx;
+  height: 260rpx;
+  /* margin-top: 110rpx; */
   white-space: nowrap;
 }
 
 .scroll_view .scroll_box .scroll_box_item {
   max-width: 240rpx;
-  height: 125rpx;
+  height: 260rpx;
+  padding-top: 110rpx;
   display: inline-block;
-  background-color: #fff;
-  margin-left: 20rpx;
+  margin: 30rpx 0 30rpx 50rpx;
   position: relative;
 }
 
 /* 滚动的图片 */
 
-.scroll_box_item .scroll_img {
-  display: block;
-  margin: 7rpx auto;
+.scroll_box_item .more_item {
+  position: absolute;
+  width: 165rpx;
+  height: 90rpx;
+  top: -30rpx;
+  left: -40rpx;
+  z-index: 999;
+  background-color: #fff;
 }
 
-.scroll_box_item .items {
+.scroll_box_item .more_item_bg {
+  width: 120rpx;
+  height: 160rpx;
+  background-color: rgba(255, 255, 255, 0.6);
   position: absolute;
-  min-width: 200rpx;
-  height: 100rpx;
-  background-color: rebeccapurple;
-  top: -50rpx;
-  left: 5rpx;
-  z-index: 1111;
+  left: -15rpx;
+  top: 80rpx;
+}
+
+.scroll_box_item .more_item .more_item_img{
+  margin: 15rpx 0;
+  margin-left: 15rpx;
+}
+
+.scroll_box_item .more_item_bg>image {
+  display: block;
+  /* width: 120rpx;
+  height: 160rpx; */
+}
+
+.scroll_box_item .more_item_7 {
+  position: absolute;
+  width: 350rpx;
+  height: 90rpx;
+  top: -30rpx;
+  left: -90rpx;
+  z-index: 999;
+  background-color: #fff;
+ float: left;
+}
+
+.scroll_box_item .more_item_bg_7 {
+  width: 210rpx;
+  height: 160rpx;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  left: -15rpx;
+  top: 80rpx;
+}
+
+
+ .more_item_7 .more_item_img {
+  margin: 5rpx 15rpx;
+}
+
+.scroll_box_item .scroll_img {
+  display: block;
+  margin: 0 auto;
 }
 
 /* 底部小组件 */
 
-.footer .footer_small_view {
+/* .footer .footer_small_view {
   width: 100%;
   height: 50rpx;
   background-color: #c6c6c6;
+} */
+.canvas{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 33333;
 }
-
-/* pages/first/first.wxss */
-
-/* pages/third/third.wxss */

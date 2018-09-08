@@ -3,44 +3,45 @@
 <view class='content'>
   <!-- 背景图片 -->
   <view class='bg_img_view'>
-    <image src='../../images/bg/bg_2.png' class='bg_img'></image>
+    <image src='../../images/bg/bg_2_1.jpg' class='bg_img'></image>
   </view>
-  <!-- 头像相框 -->
-  <!-- <view class='user_info'>
-    <view class='user_header'>
-      <open-data type="userAvatarUrl"></open-data>
-    </view>
-  </view> -->
   <!-- 灰色的背景 图片的 -->
-  <view class='fixed_view'>
-    <view class='fixed_view_item'>
-      <!-- <block wx:for="{{fixed_view}}">
-        <view class='fixed_view_img'>
-          <image src='{{item.src}}'></image>
-        </view>
-      </block> -->
-      <block wx:for="{{fixed_view_botom}}">
-        <view class='fixed_view_img'>
-          <image src='{{item.src}}' style='width:600rpx;height:171rpx;'></image>
-        </view>
-      </block>
-    </view>
+  <view class='fixed_view' style='top:{{top_num}}rpx'>
+    <block wx:for="{{fixed_view_botom}}">
+      <view class='fixed_view_img' hidden='{{show_leg}}'>
+        <image src='{{item.src}}' style='width:568rpx;margin:0 auto;display:block;height:{{166 * screen_rate}}rpx'></image>
+      </view>
+    </block>
+  </view>
+  <view style='top:{{top_num}}rpx;width:750rpx;height:{{202 * screen_rate}}rpx;left:0;z-index:-80;position:absolute;' hidden='{{show_leg}}'>
+    <image src='../../images/bg/bg_2_leg.png' style='width:750rpx;height:{{198 * screen_rate}}rpx;display:block;z-index:50'></image>
   </view>
   <!-- 移动区域 -->
   <movable-area class="move_view">
     <block wx:for="{{move_box_arr}}">
-      <movable-view class="move-view-item" direction="all" bindtouchend='end' bindchange="change" id="{{item.id}}" damping="100" style='width:{{item.width}};height:{{item.height}}' bindtouchend='end' x="{{item.x}}" y="{{item.y}}" >
+      <movable-view class="move-view-item" direction="all" bindtouchend='end' bindchange="change" id="{{item.id}}" damping="100" style='width:{{item.width}};height:{{item.height}}' bindtouchend='end' x="{{item.x}}" y="{{item.y}}">
         <view style='width:{{item.width}};height:{{item.height}};position:relative'>
           <view style='position:absolute;top:-18px;left:-18px' hidden='{{item.id == close_id?false:true}}'>
             <icon type='clear' size='18' color="#fff" bindtap='close_move_select' id='{{item.id}}'></icon>
           </view>
-          <image src='{{item.src}}' class='img' style='width:{{item.width}};height:{{item.height}}' bindtap='user_select' id='{{item.id}}' ></image>
+          <image src='{{item.src}}' class='img' style='width:{{item.width}};height:{{item.height}}' bindtap='user_select' id='{{item.id}}'></image>
         </view>
       </movable-view>
     </block>
   </movable-area>
+  <!-- 声音 -->
+  <view style='display:none'>
+    <audio src='{{music[0]}}' id='bg_music'></audio>
+    <audio src='{{music[1]}}' id='error'></audio>
+    <audio src='{{music[1]}}' id='click'></audio>
+    <audio src='{{music[3]}}' id='move_end'></audio>
+    <audio src='{{music[2]}}' id='right'></audio>
+  </view>
   <!-- next -->
-  <!-- <view class='next'  bindtap='next'>分享</view> -->
+  <view class='next' hidden='{{success_flag}}'>
+    <image src='../../images/index/answer.png' id='answer' bindtap='next'></image>
+  </view>
+  <!-- footer -->
   <!-- footer -->
   <view class='footer'>
     <!-- 滚动区域 -->
@@ -48,16 +49,55 @@
       <!-- 按钮 箭头 -->
       <view class='arrow_view'></view>
       <scroll-view class='scroll_box' scroll-x="true" scroll-with-animation="false" enable-back-to-top="true" bindscroll="scroll">
-        <block wx:for="{{product_arr}}">
-          <view class='scroll_box_item'>
-            <image src='{{item.src}}' class='scroll_img' style='width:{{item.width}};height:{{item.height}};transform:rotate({{item.rotate}})' bindtap='push_img_move' id="{{item.id}}"></image>
-            <!-- <view class='items'></view> -->
+        <view class='scroll_box_item'>
+          <image src='../../images/bg/0_3.png' class='scroll_img' style='width:240rpx;height:90rpx' bindtap='push_img_move' id="0"></image>
+        </view>
+        <view class='scroll_box_item'>
+          <image src='../../images/bg/1.png' class='scroll_img' style='width:180rpx;height:90rpx' bindtap='push_img_move' id="1"></image>
+        </view>
+        <view class='scroll_box_item'>
+          <view class='more_item' hidden='{{more_item_flag == "2"?false:true}}'>
+            <image src='../../images/bg/2_1.png' class='more_item_img' style='width:60rpx;height:60rpx' bindtap='push_img_move' id="2_1"></image>
+            <image src='../../images/bg/2_2.png' class='more_item_img' style='width:60rpx;height:60rpx' bindtap='push_img_move' id="2_2"></image>
           </view>
-        </block>
+          <view class='more_item_bg' hidden='{{more_item_flag == "2"?false:true}}'>
+          </view>
+          <image src='../../images/bg/2.png' class='scroll_img' style='width:90rpx;height:90rpx' bindtap='push_img_move' id="2"></image>
+        </view>
+        <view class='scroll_box_item'>
+          <image src='../../images/bg/3.png' class='scroll_img' style='width:180rpx;height:90rpx' bindtap='push_img_move' id="3"></image>
+        </view>
+        <view class='scroll_box_item'>
+          <image src='../../images/bg/4.png' class='scroll_img' style='width:180rpx;height:90rpx' bindtap='push_img_move' id="4"></image>
+        </view>
+        <view class='scroll_box_item'>
+          <image src='../../images/bg/5.png' class='scroll_img' style='width:180rpx;height:90rpx' bindtap='push_img_move' id="5"></image>
+        </view>
+        <view class='scroll_box_item'>
+          <!-- <view class='more_item' hidden='{{more_item_flag == "6"?false:true}}'>
+            <image src='../../images/bg/2.png' class='more_item_img' style='width:60rpx;height:60rpx' bindtap='push_img_move' id="6_1"></image>
+            <image src='../../images/bg/6.png' class='more_item_img' style='width:60rpx;height:60rpx' bindtap='push_img_move' id="6_2"></image>
+          </view>
+          <view class='more_item_bg' hidden='{{more_item_flag == "6"?false:true}}'>
+          </view> -->
+          <image src='../../images/bg/6.png' class='scroll_img' style='width:90rpx;height:90rpx' bindtap='push_img_move' id="6"></image>
+        </view>
+        <view class='scroll_box_item' style='margin-right:50rpx'>
+          <view class='more_item_7' hidden='{{more_item_flag == "7"?false:true}}'>
+            <image src='../../images/bg/9.png' class='more_item_img' style='width:40rpx;height:80rpx' bindtap='push_img_move' id="7_1"></image>
+            <image src='../../images/bg/8.png' class='more_item_img' style='width:80rpx;height:40rpx;margin:25rpx 15rpx' bindtap='push_img_move' id="7_2"></image>
+            <image src='../../images/bg/10.png' class='more_item_img' style='width:40rpx;height:80rpx' bindtap='push_img_move' id="7_3"></image>
+            <image src='../../images/bg/7.png' class='more_item_img' style='width:80rpx;height:40rpx;margin:25rpx 15rpx' bindtap='push_img_move' id="7_4"></image>
+          </view>
+          <view class='more_item_bg_7' hidden='{{more_item_flag == "7"?false:true}}'>
+          </view>
+          <image src='../../images/bg/7.png' class='scroll_img' style='width:180rpx;height:90rpx' bindtap='push_img_move' id="7"></image>
+        </view>
       </scroll-view>
     </view>
-    <!-- 底部小组件 -->
-    <view class='footer_small_view'>
-    </view>
+  </view>
+  <!-- 生成图片 -->
+  <view class='canvas' hidden='{{get_img}}' bindtap='close_img'>
+    <canvas canvas-id='myCanvas' id='myCanvas' style=' width: 100%;height: 100vh;'></canvas>
   </view>
 </view>

@@ -1,7 +1,16 @@
-<!--pages/playRank/playRank.wxml-->
-<view class='rankTitle'>请选择 挑战的游戏等级</view>
-<view class='rankList'>
-  <button bindtap='select_level' id='0'>有点简单</button>
-  <button bindtap='select_level' id='1'>略显麻烦</button>
-  <button bindtap='select_level' id='2'>有点变态</button>
+<view class="rank_bg" style='width:750rpx;height:{{height_num }}px'>
+  <view class='rank_item_first' style='top:{{388*screen_rate}}rpx'>
+    <image src="../../images/rank/1.jpg" class='first' bindtap='select_level' id='0'></image>
+  </view>
+  <view class='rank_item_second' style='top:{{533*screen_rate}}rpx'>
+    <image src="../../images/rank/2.jpg" class='second' bindtap='select_level' id='1'></image>
+  </view>
+  <view class='rank_item_last' style='top:{{678*screen_rate}}rpx'>
+    <image src="../../images/rank/3.jpg" class='last' bindtap='select_level' id='2'></image>
+  </view>
+  <!-- 声音 -->
+  <!-- <view style='display:none'>
+    <audio src='{{music[0]}}' id='bg_music'></audio>
+    <audio src='{{music[2]}}' id='click'></audio>
+  </view> -->
 </view>

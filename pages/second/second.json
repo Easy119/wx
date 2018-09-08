@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "吱音-柜在懂你",
+  "backgroundTextStyle": "light",
+  "navigationBarTextStyle": "black"
+}
